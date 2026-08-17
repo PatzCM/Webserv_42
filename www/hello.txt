@@ -1,0 +1,2 @@
+Hello from webserv!
+This file is served as plain text (text/plain) thanks to the mime table.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>webserv demo</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+	<h1>webserv</h1>
+	<p class="tagline">a tiny HTTP server, written in C++98 for the 42 project</p>
+</header>
+
+<section>
+	<h2>Static content</h2>
+	<ul>
+		<li><a href="/style.css">/style.css</a> - this stylesheet</li>
+		<li><a href="/hello.txt">/hello.txt</a> - a plain text file</li>
+		<li><a href="/files/">/files/</a> - directory listing (autoindex)</li>
+	</ul>
+</section>
+
+<section>
+	<h2>HTTP methods</h2>
+	<ul>
+		<li>GET: served everywhere</li>
+		<li>POST: upload a file at <a href="/upload">/upload</a> (stored in <code>www/upload/</code>)</li>
+		<li>DELETE: remove an uploaded file, e.g. <code>DELETE /upload/hello.txt</code></li>
+	</ul>
+</section>
+
+<section>
+	<h2>CGI</h2>
+	<ul>
+		<li><a href="/cgi-bin/hello.py">/cgi-bin/hello.py</a> - python CGI (GET with query args)</li>
+		<li><a href="/cgi-bin/env.sh">/cgi-bin/env.sh</a> - shell CGI printing the CGI environment</li>
+	</ul>
+</section>
+
+<section>
+	<h2>More features</h2>
+	<ul>
+		<li><a href="/session">/session</a> - cookies and session management</li>
+		<li><a href="/old">/old</a> - HTTP 301 redirect to /</li>
+		<li><a href="/private/">/private/</a> - directory listing forbidden (403)</li>
+		<li><a href="/missing-page">/missing-page</a> - custom 404 error page</li>
+		<li><a href="http://127.0.0.1:8081/">http://127.0.0.1:8081/</a> - second server block on another port</li>
+	</ul>
+</section>
+
+<footer><em>webserv</em> - 42 project</footer>
+</body>
+</html>
